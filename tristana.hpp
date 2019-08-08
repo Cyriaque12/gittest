@@ -19,7 +19,7 @@ public:
         health = 100;
     }
 
-    void onPostAttack() {
+    static void onPostAttack() {
         cout << "Tristana post attack" << endl;
     }
 
@@ -27,7 +27,7 @@ public:
         cout << "Tristana update" << endl;
         //orb->fonctions.push_back(onPostAttack);
         //orb->fonctions.push_back(*onPostAttack);
-        //orb->fonctions.push_back(&onPostAttack);
+        orb->fonctions.push_back(&onPostAttack);
         //orb->fonctions.push_back(this->onPostAttack);
         //orb->fonctions.push_back(*this->onPostAttack);
         //orb->fonctions.push_back(&this->onPostAttack);

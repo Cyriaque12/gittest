@@ -23,7 +23,7 @@ int main()
     trist = new Tristana();
 
     trist->orb = &orb;
-    
+    //orb->fonctions.push_back(trist->onPostAttack);
 
     orb.fonctions.push_back(fonctionTest);
     trist->onUpdate();

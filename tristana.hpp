@@ -3,20 +3,14 @@
 #include <vector>
 #include "OrbWalker.hpp"
 
-
-void testTristana() {
-    cout << "test tristana" << endl;
-}
-
 class Tristana {
 
 public:
-    int health;
     OrbWalker* orb;
 
-
-    Tristana() {
-        health = 100;
+    Tristana(OrbWalker * orb) {
+        this->orb = orb;
+        orb->fonctions.push_back(&onPostAttack);
     }
 
     static void onPostAttack() {
@@ -25,17 +19,5 @@ public:
 
     void onUpdate() {
         cout << "Tristana update" << endl;
-        //orb->fonctions.push_back(onPostAttack);
-        //orb->fonctions.push_back(*onPostAttack);
-        orb->fonctions.push_back(&onPostAttack);
-        //orb->fonctions.push_back(this->onPostAttack);
-        //orb->fonctions.push_back(*this->onPostAttack);
-        //orb->fonctions.push_back(&this->onPostAttack);
-        orb->fonctions.push_back(*testTristana);
     }
-
-
-
-
-
 };

@@ -15,6 +15,7 @@ public:
     void onUpdate() {
         int len = (int)fonctions.size();
         for (int i = 0; i<len; i++) {
+            cout << "compteur :" << i << endl;
             (this->fonctions[i])();
         }
     }
